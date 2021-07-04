@@ -1,0 +1,60 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    overflow: hidden;
+   background: rgb(117,124,128);
+   background: linear-gradient(218deg, rgba(117,124,128,1) 28%, rgba(241,244,249,1) 62%);
+}
+.container{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+   display: flex;
+   justify-content: center;
+}
+.float{
+    animation: smash 2s linear infinite alternate;
+    transform-origin:bottom ;
+}
+.shadow,.ball{
+    position: relative;
+    border-radius: 50%;
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+}
+.shadow{
+    animation: shadow 2s linear infinite alternate ; 
+      transform-origin: bottom;
+      
+}
+.ball{
+    background-image: url(../img/Basketball.png);
+    background-size: cover;
+    animation: ball 2s linear infinite;
+}
+@keyframes shadow{
+    0%{
+        transform: translateY(0);
+        box-shadow: 20px 20px 10px #444 ; 
+    }
+   
+    100%{
+        transform: translateY(-350px);
+        box-shadow: 10px 350px 100px #444 ; 
+    }
+}
+@keyframes float{
+    0%{
+        transform: scaleY(0.7);
+    }
+    20%{
+       transform: scaleY(1);   
+    }
+}
+@keyframes ball{
+    100%{
+        transform: rotate(280deg);
+    }
+}
